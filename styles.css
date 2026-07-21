@@ -238,7 +238,7 @@ footer {
 }
 
 .organizer-list {
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .speaker-list {
@@ -359,7 +359,6 @@ footer {
   }
 
   .workshop-details,
-  .organizer-list,
   .speaker-list {
     grid-template-columns: 1fr;
   }
@@ -367,6 +366,10 @@ footer {
 }
 
 @media (max-width: 620px) {
+  .organizer-list {
+    grid-template-columns: 1fr;
+  }
+
   main {
     width: min(100% - 28px, 1080px);
     padding-top: 20px;
