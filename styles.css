@@ -316,8 +316,15 @@ footer {
 }
 
 .speaker-list strong {
+  display: block;
   color: var(--muted);
   font-weight: 600;
+}
+
+.speaker-list .person-copy span {
+  display: block;
+  margin-top: 2px;
+  color: var(--muted);
 }
 
 footer {
