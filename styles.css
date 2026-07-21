@@ -237,15 +237,12 @@ footer {
   gap: 18px;
 }
 
-.organizer-list,
-.speaker-list {
-  grid-template-columns: repeat(2, 1fr);
+.organizer-list {
+  grid-template-columns: repeat(3, 1fr);
 }
 
-.organizer-list article:last-child:nth-child(odd) {
-  grid-column: 1 / -1;
-  justify-self: center;
-  width: calc((100% - 18px) / 2);
+.speaker-list {
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .organizer-list article,
@@ -367,10 +364,6 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .organizer-list article:last-child:nth-child(odd) {
-    grid-column: auto;
-    width: 100%;
-  }
 }
 
 @media (max-width: 620px) {
