@@ -321,7 +321,7 @@ footer {
   font-weight: 600;
 }
 
-.speaker-list .person-copy span {
+.speaker-list .person-copy .department {
   display: block;
   margin-top: 2px;
   color: var(--muted);
