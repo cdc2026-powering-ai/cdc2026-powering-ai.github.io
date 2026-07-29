@@ -246,7 +246,7 @@ footer {
 
 .motivation-layout {
   display: grid;
-  grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.78fr);
+  grid-template-columns: minmax(300px, 0.78fr) minmax(0, 1.72fr);
   gap: 44px;
   align-items: stretch;
 }
@@ -263,6 +263,7 @@ footer {
   border-radius: 18px;
   box-shadow: var(--shadow);
   object-fit: cover;
+  object-position: 44% center;
 }
 
 .motivation-copy {
