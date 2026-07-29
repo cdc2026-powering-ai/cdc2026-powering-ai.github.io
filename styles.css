@@ -251,6 +251,30 @@ footer {
   margin-bottom: 0;
 }
 
+.registration-cta {
+  margin: 52px 0 0;
+  text-align: center;
+}
+
+.registration-cta a {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--blue), var(--purple));
+  box-shadow: var(--shadow);
+  color: var(--white);
+  font-size: 22px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.registration-cta a:hover,
+.registration-cta a:focus-visible {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
 .organizer-list,
 .speaker-list {
   display: grid;
@@ -392,6 +416,7 @@ footer {
   }
 
   nav a,
+  .registration-cta a,
   .organizer-list article,
   .speaker-list article {
     transition: none;
@@ -464,6 +489,15 @@ footer {
 
   #motivation > p {
     font-size: 18px;
+  }
+
+  .registration-cta {
+    margin-top: 42px;
+  }
+
+  .registration-cta a {
+    padding: 12px 22px;
+    font-size: 19px;
   }
 
   .content-section {
