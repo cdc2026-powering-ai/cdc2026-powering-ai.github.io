@@ -26,10 +26,10 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 9% 2%, rgba(244, 127, 80, 0.3), transparent 28%),
-    radial-gradient(circle at 92% 4%, rgba(88, 195, 210, 0.32), transparent 30%),
-    linear-gradient(135deg, #075274 0%, #087cac 53%, #563d88 100%);
+    radial-gradient(circle at 8% 3%, rgba(88, 195, 210, 0.11), transparent 25%),
+    linear-gradient(105deg, #f3f1e8 0%, #fff0df 48%, #ffd0b1 100%);
   background-attachment: fixed;
+  background-color: #ffe6d2;
   color: var(--ink);
   font-family: "Lato", "Segoe UI", Arial, sans-serif;
   font-size: 16px;
@@ -115,7 +115,7 @@ main {
   margin-left: calc(50% - 50vw);
   padding: 58px max(24px, calc((100vw - 1360px) / 2)) 48px;
   background: transparent;
-  color: var(--white);
+  color: var(--blue-dark);
   text-align: center;
 }
 
@@ -124,9 +124,6 @@ main {
   width: min(500px, 76vw);
   height: auto;
   margin: 0 auto 28px;
-  border: 1px solid rgba(255, 255, 255, 0.42);
-  border-radius: 18px;
-  box-shadow: 0 14px 34px rgba(3, 31, 62, 0.22);
 }
 
 .title-section > p {
@@ -134,12 +131,13 @@ main {
   margin: 0 auto 18px;
 }
 
-.title-section > p:first-child {
+.title-section > p:first-of-type {
   display: inline-block;
   padding: 7px 14px;
-  border: 1px solid rgba(255, 255, 255, 0.28);
+  border: 1px solid rgba(244, 127, 80, 0.38);
   border-radius: 999px;
-  background: rgba(101, 49, 127, 0.34);
+  background: rgba(255, 248, 238, 0.52);
+  color: var(--purple);
   font-weight: 700;
   letter-spacing: 0.04em;
 }
@@ -153,7 +151,7 @@ h3 {
 h1 {
   max-width: 1180px;
   margin: 0 auto 22px;
-  color: var(--white);
+  color: var(--purple);
   font-size: 32px;
 }
 
@@ -164,7 +162,7 @@ h3 {
 
 h2 {
   margin: 0 0 28px;
-  color: var(--white);
+  color: var(--blue-dark);
   text-align: center;
 }
 
@@ -228,7 +226,8 @@ footer {
 }
 
 #motivation h2 {
-  color: var(--white);
+  color: var(--blue);
+  font-size: 30px;
   text-align: left;
 }
 
@@ -237,7 +236,9 @@ footer {
 }
 
 #motivation > p {
-  color: var(--white);
+  color: var(--blue);
+  font-size: 19px;
+  line-height: 1.8;
 }
 
 .content-section > p {
@@ -442,7 +443,6 @@ footer {
   .conference-logo {
     width: min(420px, 90vw);
     margin-bottom: 24px;
-    border-radius: 13px;
   }
 
   h1 {
@@ -456,6 +456,14 @@ footer {
 
   #motivation {
     padding: 30px 0 0;
+  }
+
+  #motivation h2 {
+    font-size: 26px;
+  }
+
+  #motivation > p {
+    font-size: 18px;
   }
 
   .content-section {
