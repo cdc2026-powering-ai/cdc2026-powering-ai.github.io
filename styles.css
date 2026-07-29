@@ -142,6 +142,12 @@ main {
   letter-spacing: 0.04em;
 }
 
+.title-section > p:last-of-type {
+  color: var(--blue);
+  font-size: 22px;
+  font-weight: 600;
+}
+
 h1,
 h2,
 h3 {
@@ -199,19 +205,21 @@ footer {
 
 .workshop-details div {
   padding: 16px 18px;
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(244, 127, 80, 0.3);
   border-radius: 14px;
-  background: rgba(7, 82, 116, 0.42);
+  background: rgba(255, 248, 238, 0.78);
 }
 
 .workshop-details dt {
-  color: rgba(255, 255, 255, 0.76);
+  color: var(--blue);
+  font-size: 18px;
   font-weight: 700;
 }
 
 .workshop-details dd {
   margin: 2px 0 0;
-  color: var(--white);
+  color: var(--blue);
+  font-size: 19px;
   font-weight: 600;
 }
 
@@ -239,6 +247,12 @@ footer {
   color: var(--blue);
   font-size: 19px;
   line-height: 1.8;
+}
+
+#speakers h2 {
+  color: var(--blue);
+  font-size: 30px;
+  text-align: center;
 }
 
 .content-section > p {
@@ -405,8 +419,10 @@ footer {
 footer {
   padding: 34px 24px;
   border-top: 2px solid rgba(244, 127, 80, 0.72);
-  background: rgba(7, 82, 116, 0.38);
-  color: var(--white);
+  background: rgba(255, 248, 238, 0.42);
+  color: var(--blue);
+  font-size: 19px;
+  font-weight: 600;
   text-align: center;
 }
 
@@ -484,6 +500,10 @@ footer {
   }
 
   #motivation h2 {
+    font-size: 26px;
+  }
+
+  #speakers h2 {
     font-size: 26px;
   }
 
