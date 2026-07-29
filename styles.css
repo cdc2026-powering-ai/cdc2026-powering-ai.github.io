@@ -228,11 +228,16 @@ footer {
 }
 
 #motivation h2 {
+  color: var(--white);
   text-align: left;
 }
 
 #motivation h2::after {
   margin-left: 0;
+}
+
+#motivation > p {
+  color: var(--white);
 }
 
 .content-section > p {
