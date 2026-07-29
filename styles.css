@@ -244,10 +244,41 @@ footer {
   margin-left: auto;
 }
 
-#motivation > p {
+.motivation-layout {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.72fr) minmax(0, 1.78fr);
+  gap: 44px;
+  align-items: stretch;
+}
+
+.motivation-figure {
+  min-height: 0;
+  margin: 0;
+}
+
+.motivation-figure img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+  object-fit: cover;
+}
+
+.motivation-copy {
+  align-self: center;
+  min-width: 0;
+}
+
+.motivation-copy p {
+  margin: 0 0 18px;
   color: var(--blue);
   font-size: 19px;
   line-height: 1.8;
+}
+
+.motivation-copy p:last-child {
+  margin-bottom: 0;
 }
 
 #speakers h2,
@@ -452,8 +483,14 @@ footer {
   }
 
   .workshop-details,
+  .motivation-layout,
   .speaker-list {
     grid-template-columns: 1fr;
+  }
+
+  .motivation-figure {
+    width: min(100%, 560px);
+    justify-self: center;
   }
 
 }
@@ -510,7 +547,7 @@ footer {
     font-size: 26px;
   }
 
-  #motivation > p {
+  .motivation-copy p {
     font-size: 18px;
   }
 
