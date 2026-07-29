@@ -1,15 +1,17 @@
 :root {
-  --blue: #2563a6;
-  --blue-bright: #70b7ec;
-  --blue-dark: #0c2f68;
-  --blue-soft: #2b669d;
-  --ink: #ffffff;
-  --muted: rgba(255, 255, 255, 0.79);
-  --page: #164f86;
-  --panel-blue: rgba(8, 35, 76, 0.38);
+  --blue: #087cac;
+  --blue-bright: #58c3d2;
+  --blue-dark: #075274;
+  --coral: #f47f50;
+  --purple: #65317f;
+  --cream: #fff8ee;
+  --ink: #173a5a;
+  --muted: #526378;
+  --page: #087cac;
+  --panel: rgba(255, 248, 238, 0.96);
   --white: #ffffff;
-  --shadow: 0 10px 30px rgba(3, 20, 48, 0.17);
-  --shadow-hover: 0 16px 38px rgba(3, 20, 48, 0.25);
+  --shadow: 0 10px 30px rgba(3, 31, 62, 0.18);
+  --shadow-hover: 0 16px 38px rgba(3, 31, 62, 0.28);
 }
 
 * {
@@ -24,8 +26,9 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 92% 4%, rgba(112, 183, 236, 0.28), transparent 29%),
-    linear-gradient(135deg, #0c2f68 0%, #164f86 56%, #2f78b9 100%);
+    radial-gradient(circle at 9% 2%, rgba(244, 127, 80, 0.3), transparent 28%),
+    radial-gradient(circle at 92% 4%, rgba(88, 195, 210, 0.32), transparent 30%),
+    linear-gradient(135deg, #075274 0%, #087cac 53%, #563d88 100%);
   background-attachment: fixed;
   color: var(--ink);
   font-family: "Lato", "Segoe UI", Arial, sans-serif;
@@ -64,8 +67,8 @@ a {
   justify-content: space-between;
   min-height: 76px;
   padding: 14px max(24px, calc((100vw - 1360px) / 2));
-  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(12, 47, 104, 0.92);
+  border-bottom: 2px solid rgba(244, 127, 80, 0.72);
+  background: rgba(7, 82, 116, 0.92);
   box-shadow: 0 4px 18px rgba(3, 20, 48, 0.12);
   backdrop-filter: blur(12px);
 }
@@ -93,7 +96,7 @@ nav a {
 
 nav a:hover,
 nav a:focus-visible {
-  background: rgba(255, 255, 255, 0.13);
+  background: rgba(244, 127, 80, 0.22);
   color: var(--white);
   transform: translateY(-1px);
   outline: none;
@@ -116,6 +119,16 @@ main {
   text-align: center;
 }
 
+.conference-logo {
+  display: block;
+  width: min(500px, 76vw);
+  height: auto;
+  margin: 0 auto 28px;
+  border: 1px solid rgba(255, 255, 255, 0.42);
+  border-radius: 18px;
+  box-shadow: 0 14px 34px rgba(3, 31, 62, 0.22);
+}
+
 .title-section > p {
   max-width: 1120px;
   margin: 0 auto 18px;
@@ -126,7 +139,7 @@ main {
   padding: 7px 14px;
   border: 1px solid rgba(255, 255, 255, 0.28);
   border-radius: 999px;
-  background: rgba(8, 35, 76, 0.28);
+  background: rgba(101, 49, 127, 0.34);
   font-weight: 700;
   letter-spacing: 0.04em;
 }
@@ -161,7 +174,7 @@ h2::after {
   height: 4px;
   margin: 12px auto 0;
   border-radius: 999px;
-  background: var(--blue-bright);
+  background: linear-gradient(90deg, var(--coral), var(--blue-bright), #73509e);
   content: "";
 }
 
@@ -190,7 +203,7 @@ footer {
   padding: 16px 18px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 14px;
-  background: rgba(8, 35, 76, 0.3);
+  background: rgba(7, 82, 116, 0.42);
 }
 
 .workshop-details dt {
@@ -252,10 +265,11 @@ footer {
   overflow: hidden;
   min-height: 152px;
   padding: 20px 22px;
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.56);
   border-radius: 16px;
-  background: var(--panel-blue);
+  background: var(--panel);
   box-shadow: var(--shadow);
+  cursor: pointer;
   transition: transform 200ms ease, box-shadow 200ms ease;
 }
 
@@ -264,7 +278,7 @@ footer {
   position: absolute;
   inset: 0 auto 0 0;
   width: 6px;
-  background: var(--blue-bright);
+  background: linear-gradient(180deg, var(--coral), var(--purple), var(--blue-bright));
   content: "";
 }
 
@@ -288,9 +302,9 @@ footer {
   width: 96px;
   height: 112px;
   overflow: hidden;
-  border: 4px solid rgba(255, 255, 255, 0.2);
+  border: 4px solid #f5c4a7;
   border-radius: 12px;
-  background: var(--blue-dark);
+  background: #d9f1f0;
   box-shadow: 0 5px 14px rgba(3, 20, 48, 0.18);
 }
 
@@ -310,16 +324,31 @@ footer {
 }
 
 .person-name-link {
-  color: var(--white);
-  text-decoration-color: rgba(255, 255, 255, 0.44);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
+  color: var(--ink);
+  font-size: inherit;
+  text-decoration: none;
 }
 
-.person-name-link:hover,
+.person-name-link::after {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  content: "";
+}
+
 .person-name-link:focus-visible {
-  color: #d9f0ff;
-  text-decoration-color: currentColor;
+  outline: none;
+}
+
+.person-name-link:focus-visible::after {
+  border-radius: 16px;
+  outline: 3px solid var(--coral);
+  outline-offset: 3px;
+}
+
+.organizer-list article:hover .person-name-link,
+.speaker-list article:hover .person-name-link {
+  color: var(--purple);
 }
 
 .organizer-list p,
@@ -345,8 +374,8 @@ footer {
 
 footer {
   padding: 34px 24px;
-  border-top: 1px solid rgba(255, 255, 255, 0.14);
-  background: rgba(8, 35, 76, 0.32);
+  border-top: 2px solid rgba(244, 127, 80, 0.72);
+  background: rgba(7, 82, 116, 0.38);
   color: var(--white);
   text-align: center;
 }
@@ -403,6 +432,12 @@ footer {
 
   .title-section {
     padding: 38px 20px 26px;
+  }
+
+  .conference-logo {
+    width: min(420px, 90vw);
+    margin-bottom: 24px;
+    border-radius: 13px;
   }
 
   h1 {
