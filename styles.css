@@ -450,6 +450,23 @@ footer {
   white-space: nowrap;
 }
 
+.person-email {
+  position: relative;
+  z-index: 3;
+  display: inline-block;
+  margin-top: 3px;
+  color: var(--blue);
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.person-email:hover,
+.person-email:focus-visible {
+  color: var(--purple);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
 .organizer-list .person-copy .department,
 .speaker-list .person-copy .department {
   display: block;
