@@ -282,6 +282,7 @@ footer {
   margin-bottom: 0;
 }
 
+#program h2,
 #speakers h2,
 #organizers h2 {
   color: var(--blue);
@@ -297,6 +298,70 @@ footer {
 
 .content-section > p:last-child {
   margin-bottom: 0;
+}
+
+.program-table-wrap {
+  overflow-x: auto;
+  border: 1px solid rgba(244, 127, 80, 0.3);
+  border-radius: 16px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+}
+
+.program-table-wrap:focus-visible {
+  outline: 3px solid var(--coral);
+  outline-offset: 3px;
+}
+
+.program-table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.program-table caption {
+  padding: 18px 22px;
+  color: var(--blue-dark);
+  font-weight: 600;
+  text-align: left;
+}
+
+.program-table th,
+.program-table td {
+  padding: 18px 22px;
+  vertical-align: top;
+}
+
+.program-table th {
+  background: var(--blue-dark);
+  color: var(--white);
+}
+
+.program-table td {
+  border-top: 1px solid rgba(7, 82, 116, 0.15);
+}
+
+.program-table td:first-child {
+  white-space: nowrap;
+}
+
+.program-table td:nth-child(2) {
+  width: 27%;
+  font-weight: 600;
+}
+
+.program-affiliation {
+  display: block;
+  margin-top: 4px;
+  color: var(--muted);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+.program-table .break-row {
+  background: rgba(88, 195, 210, 0.15);
+  color: var(--blue-dark);
 }
 
 .registration-cta {
@@ -569,6 +634,7 @@ footer {
     font-size: 26px;
   }
 
+  #program h2,
   #speakers h2,
   #organizers h2 {
     font-size: 26px;
